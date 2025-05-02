@@ -1,0 +1,21 @@
+package Poly;
+
+public class Overriding extends Overloading
+
+// Run time
+
+{
+
+	public void add() {
+
+		System.out.println("new");
+	}
+
+	public static void main(String[] args) {
+
+		Overriding or = new Overriding();
+		or.add();
+
+	}
+
+}

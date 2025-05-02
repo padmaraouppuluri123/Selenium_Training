@@ -1,0 +1,18 @@
+package Poly;
+
+public class Overriding extends Overloading
+
+{
+
+	
+	public void add() {
+		
+		System.out.println("Overriding.add()");
+	}
+	
+	public static void main(String[] args) {
+		
+		Overloading oc= new Overloading();
+		oc.add();
+	}
+}

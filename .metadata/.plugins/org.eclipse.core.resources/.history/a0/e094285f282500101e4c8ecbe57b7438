@@ -1,0 +1,26 @@
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
+public class Collection {
+
+	/ Using List - allows duplicates and maintains order
+    List<String> basketList = new ArrayList<>();
+    basketList.add("Apples");
+    basketList.add("Bananas");
+    basketList.add("Milk");
+    basketList.add("Apples"); // Duplicate
+
+    System.out.println("Items in your basket (List): " + basketList);
+
+    // Using Set - no duplicates, no order guaranteed
+    Set<String> basketSet = new HashSet<>();
+    basketSet.add("Apples");
+    basketSet.add("Bananas");
+    basketSet.add("Milk");
+    basketSet.add("Apples"); // Duplicate - ignored
+
+    System.out.println("Unique items in your basket (Set): " + basketSet);
+}
+}

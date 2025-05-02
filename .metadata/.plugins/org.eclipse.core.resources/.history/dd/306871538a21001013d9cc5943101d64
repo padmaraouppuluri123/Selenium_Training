@@ -1,0 +1,32 @@
+package Java_DataTypes;
+
+public class DataTypeExample {
+
+	public static void main(String[] args) {
+
+		// Types of Data Types
+
+		// Primitive Data Types
+
+		// A variable is like a box that holds some value, and we need to tell Java what
+		// kind of value it is (like number, text, etc.)."
+
+		int age = 25; // 'int' stores whole numbers (e.g., 5, -12)
+		float pi = 3.14f; // 'float' stores decimal numbers (less precision)
+		double g = 9.81; // 'double' stores larger decimal numbers (more precision)
+		char grade = 'A'; // 'char' stores a single character (e.g., 'A', 'b')
+		boolean isTrue = true; // 'boolean' stores true or false
+
+		// Non-Primitive Data Types
+		String name = "PadmaRao"; // 'String' stores a sequence of characters (e.g., "Hello")
+		int[] numbers = { 1, 2, 3, 4 }; // 'int[]' is an array that stores a collection of integers
+
+		System.out.println("Age isha" + age);
+		System.out.println("Pi: " + pi);
+		System.out.println("Gravity: " + g);
+		System.out.println("Grade: " + grade);
+		System.out.println("Is it true? " + isTrue);
+		System.out.println("Name: " + name);
+		
+	}
+}

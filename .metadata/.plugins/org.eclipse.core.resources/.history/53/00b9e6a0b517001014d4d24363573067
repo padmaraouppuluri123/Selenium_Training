@@ -1,0 +1,53 @@
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class login {
+	public static void main(String[] args) {
+		
+		   // Step 1: Setup ChromeDriver
+        WebDriverManager.chromedriver().setup();
+        WebDriver driver = new ChromeDriver();
+
+        try {
+            // Step 2: Navigate to the main blog page
+            driver.get("https://blog.hubspot.com/website/website-content");
+            driver.manage().window().maximize();
+            Thread.sleep(3000); // Wait for page to load
+
+            // Step 3: Click on "Newsletters"
+            WebElement newsletterLink = driver.findElement(By.linkText("Newsletters"));
+            newsletterLink.click();
+
+            // Step 4: Wait and verify title or URL
+            Thread.sleep(3000);
+            String expectedURL = "https://blog.hubspot.com/newsletter-signup";
+            String actualURL = driver.getCurrentUrl();
+
+            if (actualURL.contains("newsletter")) {
+                System.out.println("✅ Successfully navigated to the Newsletters page.");
+            } else {
+                System.out.println("❌ Navigation failed. Current URL: " + actualURL);
+            }
+
+            // Step 5: (Optional) Check if email input box is visible
+            WebElement emailInput = driver.findElement(By.name("email"));
+            if (emailInput.isDisplayed()) {
+                System.out.println("✅ Email input field is visible.");
+            } else {
+                System.out.println("❌ Email input field not visible.");
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            // Step 6: Close browser
+            driver.quit();
+        }
+    }
+}
+
+

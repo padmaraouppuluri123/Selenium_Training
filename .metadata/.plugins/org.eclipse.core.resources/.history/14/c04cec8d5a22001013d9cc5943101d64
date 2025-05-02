@@ -1,0 +1,51 @@
+package Demo;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class Login {
+
+	public static void main(String[] args) {
+		 // Set path to your chrome driver executable
+		 WebDriverManager.chromedriver().setup();
+        WebDriver driver = new ChromeDriver();
+
+        try {
+            // Open Facebook
+            driver.get("https://www.facebook.com/");
+
+            // Maximize window
+            driver.manage().window().maximize();
+
+            // Enter email
+            WebElement emailField = driver.findElement(By.id("email"));
+            emailField.sendKeys("your-email@example.com");
+
+            // Enter password
+            WebElement passwordField = driver.findElement(By.id("pass"));
+            passwordField.sendKeys("your-password");
+
+            // Click login
+            WebElement loginButton = driver.findElement(By.name("login"));
+            loginButton.click();
+
+            // Optionally wait or validate successful login
+            Thread.sleep(5000); // Not recommended long-term, use WebDriverWait instead
+
+            System.out.println("Login attempt completed.");
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            // Close browser (optional)
+            // driver.quit();
+        }
+    }
+
+	}
+
+

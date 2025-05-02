@@ -1,0 +1,48 @@
+package Encapsulation;
+
+public class Employee {
+
+	// Encapsulation = Binding variables and methods into a single class + Hiding
+	// internal details.
+
+	// We make variables private → so that no one can access them directly from
+	// outside the class.
+
+	// We allow controlled access using getters (to read the value) and setters (to
+	// modify the value).
+
+	// private variables (data hiding)
+	private String name;
+	private int age;
+	private double salary;
+
+	// public getter for 'name'
+	public String getName() {
+		return name;
+	}
+
+	// public setter for 'name'
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	// public getter for 'age'
+	public int getAge() {
+		return age;
+	}
+
+	// public setter for 'age'
+	public void setAge(int age) {
+		this.age = age;
+	}
+
+	// public getter for 'salary'
+	public double getSalary() {
+		return salary;
+	}
+
+	// public setter for 'salary'
+	public void setSalary(double salary) {
+		this.salary = salary;
+	}
+}

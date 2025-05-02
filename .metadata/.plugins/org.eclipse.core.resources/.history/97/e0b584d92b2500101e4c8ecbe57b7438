@@ -1,0 +1,75 @@
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Queue;
+import java.util.Set;
+
+public class Collection {
+
+	public static void main(String[] args) {
+
+		/*
+		 * 1. List<String> This is the interface type (super type).
+		 * 
+		 * List is part of the Java Collections Framework.
+		 * 
+		 * It represents an ordered collection of elements.
+		 * 
+		 * String is the type of data you're storing — here, strings like "Apples",
+		 * "Milk".
+		 * 
+		 * 2. basketList This is the name of your list variable.
+		 * 
+		 * You can name it anything, but here it logically refers to a shopping basket.
+		 * 
+		 * 3. = new ArrayList<>(); This is the object creation part.
+		 * 
+		 * ArrayList is a class that implements the List interface.
+		 */
+
+		// Using List - allows duplicates and maintains order
+		List<String> basketList = new ArrayList<>();
+		basketList.add("Apples");
+		basketList.add("Bananas");
+		basketList.add("Milk");
+		basketList.add("Apples"); // Duplicate
+
+		System.out.println("Items in your basket (List): " + basketList);
+
+		// Using Set - no duplicates, no order guaranteed
+
+		HashSet<String> basketSet = new HashSet<>();
+		basketSet.add("Apples");
+		basketSet.add("Bananas");
+		basketSet.add("Milk");
+		basketSet.add("Apples"); // Duplicate - ignored
+
+		System.out.println("Unique items in your basket (Set): " + basketSet);
+
+		// Create a HashMap to store Employee ID (Integer) and Name (String)
+		HashMap<Integer, String> employeeMap = new HashMap<>();
+
+		// Add employees
+		employeeMap.put(101, "Ramya");
+		employeeMap.put(102, "PadmaRao");
+		employeeMap.put(103, "Sushma");
+
+		// Update name for employee 101
+		employeeMap.put(101, "Ramya Uppuluri"); // replaces "Ramya"
+
+		// Print all entries
+		System.out.println(employeeMap);
+
+		// the main use of a Queue in Java is to manage ordered data processing,
+		// especially when you need to process items in the same order they arrive (FIFO
+		// – First In, First Out).
+
+		Queue<String> queue = new LinkedList<>();
+		queue.add("Task1");
+		queue.add("Task2");
+		System.out.println(queue.poll()); // Task1 is removed first
+
+	}
+}

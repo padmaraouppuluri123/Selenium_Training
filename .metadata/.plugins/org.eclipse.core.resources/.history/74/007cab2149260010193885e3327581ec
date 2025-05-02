@@ -1,0 +1,25 @@
+package Collection;
+
+import java.util.ArrayList;
+
+public class Collection_List {
+	
+	
+	public static void main(String[] args) {
+		
+		// List for example we have went for super market 
+		
+		
+		ArrayList<String> basketList = new ArrayList<>();
+		basketList.add("Apples");
+		basketList.add("Bananas");
+		basketList.add("Milk");
+		basketList.add("Apples"); // Duplicate
+
+		System.out.println("Items in your basket (List): " + basketList);
+
+		
+	}
+	
+
+}

@@ -1,0 +1,33 @@
+package com_variables;
+
+public class StaticVariableExample {
+
+	
+	static String ab="neha";
+
+	public void abc() {
+		
+		
+		System.out.println(ab);
+		
+	}
+	
+	public void abcd() {
+		
+		System.out.println(ab);
+	}
+	
+	
+	public static void main(String[] args) {
+		StaticVariableExample se= new StaticVariableExample();
+		se.abc();
+		se.abcd();
+		
+		StaticVariableExample.ab="neha1";
+		se.abc();
+		se.abcd();
+		
+		
+		
+	}
+}

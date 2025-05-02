@@ -1,0 +1,17 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class Collection {
+	
+	public static void main(String[] args) {
+		
+	
+	List<String> names = new ArrayList<>();
+	names.add("RaO");
+	names.add("PadmaRao");
+	names.add("Rao")
+	
+	System.out.println(names);
+	}
+
+}

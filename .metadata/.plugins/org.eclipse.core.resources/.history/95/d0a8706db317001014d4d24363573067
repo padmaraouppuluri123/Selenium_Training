@@ -1,0 +1,50 @@
+package TC_01_Login;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class sigin {
+	
+	
+public static void main(String[] args) {
+	
+	 // Set the path to ChromeDriver executable
+    System.setProperty("webdriver.chrome.driver", "C:\\Users\\padma\\Downloads\\chromedriver-win64\\chromedriver-win64\\chromedriver.exe");
+
+    // Initialize WebDriver
+    WebDriver driver = new ChromeDriver();
+
+    // Maximize window
+    driver.manage().window().maximize();
+
+    // Open Flipkart
+    driver.get("https://www.facebook.com/login.php/");
+
+    // Wait for 2 seconds (basic wait, ideally use WebDriverWait)
+    try {
+        Thread.sleep(2000);
+    } catch (InterruptedException e) {
+        e.printStackTrace();
+    }
+
+ // Enter email/phone number
+    WebElement emailField = driver.findElement(By.id("email"));
+    emailField.sendKeys("uppuluri.veera@gmail.com"); // 🔁 Replace with test email
+
+    // Enter password
+    WebElement passwordField = driver.findElement(By.id("pass"));
+    passwordField.sendKeys("AmmaDaddy@123@"); // 🔁 Replace with test password
+
+    // Click Login button
+    WebElement loginButton = driver.findElement(By.name("login"));
+    loginButton.click();
+    // Close the browser
+    //driver.quit();	
+
+}
+
+}
+
+

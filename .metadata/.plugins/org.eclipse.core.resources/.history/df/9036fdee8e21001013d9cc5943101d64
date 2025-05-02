@@ -1,0 +1,26 @@
+package com_variables;
+
+public class InstanceVariableExample {
+
+	int ab=25;
+	
+	public void neha() {
+		
+		System.out.println(ab);
+	}
+	
+	public void neha1() {
+		
+		System.out.println(ab);
+		
+	}
+	
+	
+	public static void main(String[] args) {
+		
+		InstanceVariableExample ve= new InstanceVariableExample();
+		ve.neha();
+		ve.neha1();
+	}
+	
+}

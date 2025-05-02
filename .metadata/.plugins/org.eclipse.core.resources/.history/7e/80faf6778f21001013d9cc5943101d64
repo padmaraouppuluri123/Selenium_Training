@@ -1,0 +1,27 @@
+package com_variables;
+
+public class StaticVariableExample {
+
+	
+	static String ab="neha";
+
+	public void neha() {
+		
+		
+		System.out.println(ab);
+		
+	}
+	
+	public void neha1() {
+		
+		System.out.println(ab);
+	}
+	
+	
+	public static void main(String[] args) {
+		StaticVariableExample se= new StaticVariableExample();
+		se.neha();
+		se.neha1();
+		
+	}
+}

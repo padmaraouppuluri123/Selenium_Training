@@ -1,0 +1,36 @@
+package Constructor;
+
+public class Student {
+
+	// A constructor is a special method in Java that is used to initialize objects
+	// when they are created. It has the same name as the class, does not have a
+	// return type, and is called automatically when you create an object using the
+	// new keyword.
+
+	// Instance variables
+	String name;
+	int rollNo;
+
+	// Constructor method
+	public Student(String studentName, int studentRollNo) {
+		name = studentName;
+		rollNo = studentRollNo;
+	}
+
+	// Method to display student details
+	public void displayDetails() {
+		System.out.println("Name: " + name);
+		System.out.println("Roll No: " + rollNo);
+	}
+
+	public static void main(String[] args) {
+		// Creating objects using constructor
+		Student s1 = new Student("Ramya", 101);
+		Student s2 = new Student("PadmaRao", 102);
+
+		// Display details
+		s1.displayDetails();
+		s2.displayDetails();
+	}
+
+}

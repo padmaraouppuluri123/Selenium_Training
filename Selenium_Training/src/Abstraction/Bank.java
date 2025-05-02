@@ -1,0 +1,16 @@
+package Abstraction;
+
+public abstract class Bank {
+	
+	
+	
+	
+	abstract void loan();
+	
+	abstract void depoist();
+	
+	
+	
+	
+
+}

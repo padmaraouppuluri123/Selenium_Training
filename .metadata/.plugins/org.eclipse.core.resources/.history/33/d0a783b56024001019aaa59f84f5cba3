@@ -1,0 +1,15 @@
+
+public interface Laptop {
+	
+	// I am inventing an Laptop
+	
+	public void copy();
+	
+	public void paste();
+	
+	public void mouse();
+	
+	public void keys();
+	
+
+}

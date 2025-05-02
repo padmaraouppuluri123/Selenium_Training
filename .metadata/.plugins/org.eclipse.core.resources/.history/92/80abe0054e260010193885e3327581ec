@@ -1,0 +1,81 @@
+package Collection;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
+
+public class Collection_List {
+	
+	
+	public static void main(String[] args) {
+		
+		// List for example we have went for super market 
+		
+		//List
+		//List, map, set
+		
+		//ArrayList
+		
+		// API Automation
+		
+		// Get, post,put, delete
+		
+		// Get - getting the data from database
+		
+		// post call-- we are storing data in db
+		
+		// first name-neha
+		//country=newz
+		// mobil numebr=121212
+		// email id =asdas@gmail.com
+		// click on register -- data will store in db
+		
+		// get the data from database
+		
+		
+		
+		
+		
+		
+		ArrayList<String> basketList = new ArrayList<>();
+		basketList.add("Apples");
+		basketList.add("Bananas");
+		basketList.add("Milk");
+		basketList.add("Apples"); // Duplicate
+
+		System.out.println("Items in your basket (List): " + basketList);
+		
+		// HashSet
+		
+		HashSet<String> basketSet = new HashSet<>();
+		basketSet.add("Apples");
+		basketSet.add("Bananas");
+		basketSet.add("Milk");
+		basketSet.add("Apples"); // Duplicate - ignored
+
+		System.out.println("Unique items in your basket (Set): " + basketSet);
+		
+		// HashMap
+		
+		HashMap<Integer, String> employeeMap = new HashMap<>();
+
+		// Add employees
+		employeeMap.put(101, "Ramya");
+		employeeMap.put(102, "PadmaRao");
+		employeeMap.put(103, "Sushma");
+
+		// Update name for employee 101
+		employeeMap.put(101, "Ramya Uppuluri"); // replaces "Ramya"
+
+		// Print all entries
+		System.out.println(employeeMap);
+		
+		
+		
+
+
+		
+	}
+	
+
+}

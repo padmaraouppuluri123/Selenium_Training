@@ -1,0 +1,12 @@
+package Abstraction;
+
+public class Execution {
+	
+	public static void main(String[] args) {
+		
+		Sbi b = new Sbi();  // We are just using Bank reference
+        b.loan();            // What loan is provided
+		
+	}
+
+}

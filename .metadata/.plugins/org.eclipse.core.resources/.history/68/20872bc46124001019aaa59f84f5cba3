@@ -1,0 +1,24 @@
+
+public interface Laptop {
+	
+	// I am inventing an Laptop
+	
+	// Interface = "List of methods without implementation."
+	
+	public void copy();
+	
+	public void paste();
+	
+	public void mouse();
+	
+	public void keys();
+	
+
+
+
+//Second Interface: Printer
+public interface Printer {
+ public void print();
+ public void scan();
+}
+}

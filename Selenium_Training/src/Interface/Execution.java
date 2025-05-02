@@ -1,0 +1,19 @@
+package Interface;
+
+public class Execution {
+
+	
+	
+	
+	public static void main(String[] args) {
+		
+		Lenovo l=new Lenovo();
+		l.copy();
+		l.paste();
+		l.keys();
+		l.mouse();
+		l.print();
+		
+		
+	}
+}

@@ -1,0 +1,35 @@
+
+public class Lenovo implements Laptop {
+
+	
+	public void copy() {
+		// TODO Auto-generated method stub
+		
+		System.out.println("I have implemenetd copy method");
+		
+	}
+
+
+	public void paste() {
+		
+		System.out.println("I have implemenetd Paste method");
+		
+	}
+
+
+	public void mouse() {
+		
+		System.out.println("I have implemenetd Mouse method");
+		
+	}
+
+	
+	public void keys() {
+		
+		System.out.println("I have implemenetd Keys method");
+		
+	}
+	
+	
+
+}

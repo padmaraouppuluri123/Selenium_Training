@@ -1,0 +1,10 @@
+/**
+ * 
+ */
+/**
+ * @author padma
+ *
+ */
+module Selenium_Training {
+	requires org.seleniumhq.selenium.api;
+}

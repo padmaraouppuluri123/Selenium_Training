@@ -1,0 +1,21 @@
+package Inhertence;
+
+public class Child extends Parent{
+	
+	
+	public void owncar() {
+		
+		System.out.println("child has own car");
+		
+	}
+	
+	public static void main(String[] args) {
+		
+		Child cc=new Child();
+		cc.owncar();
+		cc.car();
+		cc.house();
+		cc.land();
+	}
+
+}

@@ -1,0 +1,17 @@
+package Java_Variables;
+
+public class LocalVariable {
+
+	
+	
+	public void display() {
+        int localNumber = 10;  // Local variable
+        System.out.println("Local variable value: " + localNumber);
+    }
+
+    public static void main(String[] args) {
+    	LocalVariable obj = new LocalVariable();
+        obj.display();
+    }
+
+}

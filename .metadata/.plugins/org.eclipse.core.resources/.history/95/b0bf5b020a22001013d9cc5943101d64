@@ -1,0 +1,20 @@
+package Java_Variables;
+
+public class InstanceVariable {
+
+	// Definition: Variables declared inside the class but outside any method are called instance variables
+	static int age = 25; // Instance variable
+
+	public void showAge() {
+		System.out.println("Age is: " + age);
+	}
+
+	public static void main(String[] args) {
+		InstanceVariable person1 = new InstanceVariable();
+		person1.showAge();
+		
+		InstanceVariable.age=50;
+		//person1.showAge();
+		
+	}
+}

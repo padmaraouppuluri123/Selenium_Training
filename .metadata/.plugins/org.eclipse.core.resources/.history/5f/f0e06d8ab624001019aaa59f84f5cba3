@@ -1,0 +1,36 @@
+package Poly;
+
+import java.security.DomainCombiner;
+
+public class Overloading {
+
+	// poly- two types
+
+	// Compiltime poly
+
+	// Run Time Poly
+	int a = 10;
+
+	// Overloading means method name should be same but parameters are different is
+	// know as overloading
+
+	public void add() {
+
+		System.out.println(a);
+
+	}
+
+	public void add(int i) {
+
+		System.out.println("Overloading.add()");
+
+	}
+	
+	public static void main(String[] args) {
+		
+		Overloading oc=new Overloading();
+		oc.add();
+		
+	}
+
+}

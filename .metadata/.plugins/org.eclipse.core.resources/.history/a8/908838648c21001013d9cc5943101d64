@@ -1,0 +1,22 @@
+package com_variables;
+
+public class VariablesExample {
+
+	
+	public void neha() {
+		
+		int age=25;
+		System.out.println(age);
+		
+	}
+	
+	
+	public static void main(String[] args) {
+		
+		
+		
+		
+	}
+	
+	
+}

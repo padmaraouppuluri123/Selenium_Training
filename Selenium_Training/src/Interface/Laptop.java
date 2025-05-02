@@ -1,0 +1,16 @@
+package Interface;
+
+public interface Laptop {
+
+	// I am inventing an Laptop
+
+	// Interface = "List of methods without implementation."
+
+	 // Methods related to Laptop
+    public void copy();
+    public void paste();
+    public void mouse();
+    public void keys();
+}
+
+// Second Interface: Printer
