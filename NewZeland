@@ -1,0 +1,71 @@
+package Demo;
+
+import org.openqa.selenium.*;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.*;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+import java.time.Duration;
+import java.util.List;
+
+public class LinkChecker {
+    public static void main(String[] args) {
+        WebDriverManager.chromedriver().setup();
+        WebDriver driver = new ChromeDriver();
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        driver.manage().window().maximize();
+
+        try {
+            driver.get("https://www.justice.govt.nz/");
+            Thread.sleep(3000);
+
+            // Hover over "Family" tab
+            WebElement familyTab = driver.findElement(By.linkText("Family"));
+            Actions actions = new Actions(driver);
+            actions.moveToElement(familyTab).perform();
+            Thread.sleep(2000); // wait for dropdown to appear
+
+            // Locate all submenu links under the "Family" tab
+            List<WebElement> familyLinks = driver.findElements(
+                By.xpath("//div[contains(@class,'main-subnav')]//a")
+            );
+
+            System.out.println("Total Family Module Links Found: " + familyLinks.size());
+
+            for (int i = 0; i < familyLinks.size(); i++) {
+                // Refresh the list to avoid stale element
+                familyTab = driver.findElement(By.linkText("Family"));
+                actions.moveToElement(familyTab).perform();
+                Thread.sleep(2000);
+
+                familyLinks = driver.findElements(
+                    By.xpath("//div[contains(@class,'main-subnav')]//a")
+                );
+                WebElement link = familyLinks.get(i);
+                String linkText = link.getText().trim();
+                System.out.println("\n🔗 Navigating to: " + linkText);
+
+                // Open the link
+                link.click();
+                Thread.sleep(3000);
+
+                System.out.println("✅ Reached: " + driver.getTitle());
+
+                // Go back to homepage and re-hover
+                driver.navigate().back();
+                wait.until(ExpectedConditions.presenceOfElementLocated(By.linkText("Family")));
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                Thread.sleep(5000);
+            } catch (InterruptedException ignored) {}
+            driver.quit();
+        }
+    }
+}
